@@ -1,0 +1,16 @@
+{
+  "name": "CalcModule",
+  "version": "4.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "AdditionModule": "4.0.1",
+    "SubtractionModule": "4.0.1"
+  }
+}
