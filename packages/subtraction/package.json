@@ -1,13 +1,13 @@
 {
   "name": "SubtractionModule",
-  "version": "4.2.0",
+  "version": "4.3.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "mocha test"
   },
   "dependencies": {
-    "AdditionModule": "4.2.0"
+    "AdditionModule": "4.3.0"
   },
   "keywords": [],
   "author": "",
