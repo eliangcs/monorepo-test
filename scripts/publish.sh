@@ -24,10 +24,12 @@ if [ -z "$PKG_NAME" ] || [ -z "$PKG_VERSION" ]; then
     exit 1
 fi
 
+# Add auth token to .npmrc
 NPMRC_PATH="$HOME/.npmrc"
-
 NPM_REGISTRY_NO_PROTO=`echo $NPM_REGISTRY | sed -E 's/^https?://'`
+echo "$NPM_REGISTRY_NO_PROTO/:_authToken=\"$NPM_TOKEN\"" > $NPMRC_PATH
 
+# cd to the package directory and publish!
 PKG_PATH=`yarn workspaces info -s | jq -r ".$PKG_NAME.location"`
 cd $PKG_PATH
 npm publish --registry $NPM_REGISTRY
